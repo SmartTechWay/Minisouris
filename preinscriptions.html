@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+
+    <title>Minisouris</title>
+</head>
+<body>
+
+<!-- Ajoutez votre logo ici -->
+<div class="logo-container">
+    <img src="Images/logo.png" alt="Logo de Minisouris" class="logo">
+</div>
+
+<nav class="navbar">
+    <ul class="navbar-container">
+        <li class="navbar-item">
+            <a href="index.html">
+                Accueil
+            </a>
+            <span class="navbar-item_label"></span>
+        </li>
+        <li class="navbar-item">
+            <a href="info.html">
+                Informations
+            </a>
+            <span class="navbar-item_label"></span>
+        </li>
+        <li class="navbar-item">
+            <a href="preinscriptions.html">
+                Préinscriptions
+            </a>
+            <span class="navbar-item_label"></span>
+        </li>
+        <li class="navbar-item">
+            <a href="recrutement.html">
+                Recrutement
+            </a>
+            <span class="navbar-item_label"></span>
+        </li>
+    </ul>
+</nav>
+
+<div class="empty-space"></div>
+
+<div class="content">
+    <div class="article">
+        <div class="article-text">
+            <h2>Préinscriptions à la Crèche</h2>
+            <p>Nous sommes ravis de vous annoncer l'ouverture des préinscriptions pour notre crèche, inspirée par la méthode Montessori. Notre établissement vise à offrir un environnement chaleureux et stimulant pour vos enfants, favorisant leur autonomie, créativité et développement personnel.</p>
+        </div>
+        <img src="https://via.placeholder.com/400x300?text=Montessori" alt="Montessori" class="article-image">
+    </div>
+</div>
+
+<div class="pricing-container">
+    <h2 class="pricing-title">Nos Tarifs</h2>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3 class="pricing-plan">Forfait Standard</h3>
+            <p class="pricing-price">150€ / mois</p>
+            <ul class="pricing-features">
+                <li>Accueil de 8h à 16h</li>
+                <li>Repas inclus</li>
+                <li>Activités Montessori</li>
+                <li>Accès au jardin</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card">
+            <h3 class="pricing-plan">Forfait Premium</h3>
+            <p class="pricing-price">250€ / mois</p>
+            <ul class="pricing-features">
+                <li>Accueil de 8h à 18h</li>
+                <li>Repas inclus</li>
+                <li>Activités Montessori + Créatives</li>
+                <li>Sorties pédagogiques</li>
+                <li>Accès au jardin et à la salle de jeux</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card">
+            <h3 class="pricing-plan">Forfait VIP</h3>
+            <p class="pricing-price">400€ / mois</p>
+            <ul class="pricing-features">
+                <li>Accueil de 8h à 20h</li>
+                <li>Repas gastronomiques inclus</li>
+                <li>Activités Montessori, Créatives et Sportives</li>
+                <li>Sorties pédagogiques et culturelles</li>
+                <li>Accès au jardin, salle de jeux et à la piscine</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="empty-space"></div>
+
+<div class="form-wrapper">
+
+<div class="progress-bar">
+    <div class="step active">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
+    <div class="step">4</div>
+</div>
+
+<form id="multi-step-form">
+    <!-- SECTION 1: Infos Enfant -->
+    <div class="form-section active">
+        <h2>Infos Enfant</h2>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Prénom" >
+
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Nom" >
+
+        <label for="date_naissance">Date de naissance</label>
+        <input type="date" id="date_naissance" name="date_naissance" >
+
+        <label for="lieu_naissance">Lieu de naissance</label>
+        <input type="text" id="lieu_naissance" name="lieu_naissance" placeholder="Lieu de naissance">
+
+        <label for="genre">Genre</label>
+        <select id="genre" name="genre">
+            <option value="garçon">Garçon</option>
+            <option value="fille">Fille</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <div class="button-container">
+            <button type="button" class="next-btn">Suivant</button>
+        </div>
+
+    </div>
+
+    <!-- Section 2: Planning souhaité -->
+    <div class="form-section" id="section-2">
+
+        <h2>Contrat</h2>
+        <label for="debut_contrat">Début du contrat</label>
+        <input type="date" id="debut_contrat" name="debut_contrat">
+
+        <label for="fin_contrat">Fin du contrat</label>
+        <input type="date" id="fin_contrat" name="fin_contrat">
+
+        <label for="flexible">Planning flexible ?</label>
+        <input type="checkbox" id="flexible" name="flexible">
+
+        <h2>Planning souhaité</h2>
+        <p>Pour modifier une plage, cliquez dessus.</p>
+
+        <div class="planning-container">
+
+        </div>
+
+        <button type="button" class="add-week">Ajouter une semaine de roulement</button>
+
+        <div class="button-container">
+            <button type="button" class="prev-btn">Précédent</button>
+            <button type="button" class="next-btn">Suivant</button>
+        </div>
+
+        <!-- Modale pour définir les heures -->
+        <div id="timeSlotModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Ajouter un créneau - <span id="day-name"></span></h3>
+                <label for="start-time">De :</label>
+                <input type="time" id="start-time" value="07:00">
+                <br><br>
+                <label for="end-time">À :</label>
+                <input type="time" id="end-time" value="19:00">
+                <br><br>
+                <button id="save-time-slot">Sauvegarder</button>
+                <button id="cancel-time-slot">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Infos Parents -->
+    <div class="form-section">
+
+        <label for="relation_parent">Relation avec l'enfant</label>
+        <select id="relation_parent" name="relation_parent">
+            <option value="">Sélectionner</option>
+            <option value="mere">Mère</option>
+            <option value="pere">Père</option>
+            <option value="soeur">Soeur</option>
+            <option value="frere">Frère</option>
+            <option value="oncle">Oncle</option>
+            <option value="tante">Tante</option>
+            <option value="belle-mere">Belle-mère</option>
+            <option value="beau-pere">Beau-père</option>
+            <option value="grand-parent">Grand-parent</option>
+            <option value="tuteur">Tuteur</option>
+            <option value="tutrice">Tutrice</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <label for="prenom_parent">Prénom</label>
+        <input type="text" id="prenom_parent" name="prenom_parent" placeholder="Prénom">
+
+        <label for="nom_parent">Nom</label>
+        <input type="text" id="nom_parent" name="nom_parent" placeholder="Nom">
+
+        <label for="email_parent">Email</label>
+        <input type="email" id="email_parent" name="email_parent" placeholder="Email">
+
+        <label for="allocataire">N° d'allocataire*</label>
+        <input type="text" id="allocataire" name="allocataire" placeholder="N° d'allocataire">
+
+        <label for="telephone_fixe">Téléphone fixe</label>
+        <input type="tel" id="telephone_fixe" name="telephone_fixe" placeholder="Téléphone fixe">
+
+        <label for="telephone_portable">Téléphone portable</label>
+        <input type="tel" id="telephone_portable" name="telephone_portable" placeholder="Téléphone portable">
+
+        <label for="adresse_parent">Adresse</label>
+        <input type="text" id="adresse_parent" name="adresse_parent" placeholder="Adresse">
+
+        <label for="code_postal">Code Postal</label>
+        <input type="text" id="code_postal" name="code_postal" placeholder="Code Postal">
+
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville" placeholder="Ville">
+
+        <label for="pays">Pays</label>
+        <input type="text" id="pays" name="pays" placeholder="Pays">
+
+        <label for="revenu_annuel">Revenu annuel*</label>
+        <input type="text" id="revenu_annuel" name="revenu_annuel" placeholder="Revenu annuel">
+
+        <label for="profession">Profession</label>
+        <input type="text" id="profession" name="profession" placeholder="Profession" >
+
+        <label for="nom_entreprise">Nom de l'entreprise</label>
+        <input type="text" id="nom_entreprise" name="nom_entreprise" placeholder="Nom de l'entreprise">
+
+        <label for="contrat_entreprise">Contrat d'entreprise</label>
+        <select id="contrat_entreprise" name="contrat_entreprise">
+            <option value="">Sélectionner</option>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+        </select>
+
+        <label for="personnes_a_charges">Personnes à charges</label>
+        <input type="text" id="personnes_a_charges" name="personnes_a_charges" placeholder="Personnes à charges">
+
+        <label for="enfants_handicap">Enfants avec handicap</label>
+        <input type="text" id="enfants_handicap" name="enfants_handicap" placeholder="Enfants avec handicap">
+
+        <div class="button-container">
+            <button type="button" class="prev-btn">Précédent</button>
+            <button type="button" class="next-btn">Suivant</button>
+        </div>
+
+    </div>
+
+    <!-- SECTION 4: Validation -->
+    <div class="form-section">
+        <h2>Validation</h2>
+        <label for="comments">Informations supplémentaires</label>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+
+        <div class="button-container">
+            <button type="button" class="prev-btn">Précédent</button>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </div>
+
+    </div>
+</form>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="Images/logo2.png" alt="Logo de Minisouris" class="footer-logo-img">
+        </div>
+        <div class="footer-links">
+            <div class="footer-section">
+                <p><a href="#">Nous contacter</a></p>
+                <div class="contact-info">
+                    <p>Téléphone : +33 1 23 45 67 89</p>
+                    <p>Email : contact@minisouris.com</p>
+                    <p>Adresse : 123 Rue de l'École, 75001 Paris, France</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p><a href="#">Suivez-nous</a></p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/minisourismicrocreche/" target="_blank">
+                        <img src="Images/instagram-icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/minisourismicrocreche" target="_blank">
+                        <img src="Images/facebook-icon.png" alt="Facebook" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p><a href="Mentions.html">Mentions légales</a></p>
+                <div class="contact-info">
+                    <p>Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

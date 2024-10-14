@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Minisouris</title>
+</head>
+<body>
+
+<!-- Ajoutez votre logo ici -->
+<div class="logo-container">
+  <img src="Images/logo.png" alt="Logo de Minisouris" class="logo">
+</div>
+
+<nav class="navbar">
+  <ul class="navbar-container">
+    <li class="navbar-item">
+      <a href="index.html">
+        Accueil
+      </a>
+      <span class="navbar-item_label"></span>
+    </li>
+    <li class="navbar-item">
+      <a href="info.html">
+        Informations
+      </a>
+      <span class="navbar-item_label"></span>
+    </li>
+    <li class="navbar-item">
+      <a href="preinscriptions.html">
+        Préinscriptions
+      </a>
+      <span class="navbar-item_label"></span>
+    </li>
+    <li class="navbar-item">
+      <a href="recrutement.html">
+        Recrutement
+      </a>
+      <span class="navbar-item_label"></span>
+    </li>
+  </ul>
+</nav>
+
+<div class="content">
+<section>
+  <ul class="list">
+    <li class="item"><div class="content"><img src="images/1.jpg" alt="Castle" /></div></li>
+    <li class="item"><div class="content"><img src="images/2.jpg" alt="Castle 2" /></div></li>
+    <li class="item"><div class="content"><img src="images/3.jpg" alt="Castle 3" /></div></li>
+    <li class="item"><div class="content"><img src="images/4.jpg" alt="Castle 4" /></div></li>
+
+  </ul>
+
+</section>
+</div>
+
+<script>
+  const list = document.querySelector('.list');
+  let index = 0;
+
+  function showNextItem() {
+    index = (index + 1) % list.children.length; // Passe à l'élément suivant
+    list.scrollTo({
+      left: index * list.clientWidth,
+      behavior: 'smooth' // Défilement en douceur
+    });
+  }
+
+  setInterval(showNextItem, 2000); // Change d'image toutes les 3 secondes
+</script>
+
+<div class="content">
+
+  <div class="article">
+    <div class="article-text">
+      <h2>Informations</h2>
+      <p>Tout savoir sur notre microcrèche, nos valeurs, et notre équipe. Découvrez l'univers de Minisouris.</p>
+      <a href="info.html" class="btn">En savoir plus</a>
+    </div>
+    <img src="https://via.placeholder.com/400x300?text=Montessori" alt="Montessori" class="article-image">
+  </div>
+
+  <div class="article reverse">
+    <img src="https://via.placeholder.com/400x300?text=Valeurs" alt="Valeurs de la crèche" class="article-image">
+    <div class="article-text">
+      <h2>Préinscriptions</h2>
+      <p><p>Envie d'inscrire votre enfant ? Consultez les informations sur le processus de préinscription.</p></p>
+      <a href="preinscriptions.html" class="btn">En savoir plus</a>
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-text">
+      <h2>Notre Équipe Pédagogique</h2>
+      <p>Nous sommes toujours à la recherche de personnes passionnées. Rejoignez notre équipe !</p>
+      <a href="recrutement.html" class="btn">En savoir plus</a>
+    </div>
+    <img src="https://via.placeholder.com/400x300?text=Équipe" alt="Équipe pédagogique" class="article-image">
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="Images/logo2.png" alt="Logo de Minisouris" class="footer-logo-img">
+    </div>
+    <div class="footer-links">
+      <div class="footer-section">
+        <p><a href="#">Nous contacter</a></p>
+        <div class="contact-info">
+          <p>Téléphone : +33 1 23 45 67 89</p>
+          <p>Email : contact@minisouris.com</p>
+          <p>Adresse : 123 Rue de l'École, 75001 Paris, France</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <p><a href="#">Suivez-nous</a></p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/minisourismicrocreche/" target="_blank">
+            <img src="Images/instagram-icon.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://www.facebook.com/minisourismicrocreche" target="_blank">
+            <img src="Images/facebook-icon.png" alt="Facebook" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <p><a href="Mentions.html">Mentions légales</a></p>
+        <div class="contact-info">
+          <p>Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
